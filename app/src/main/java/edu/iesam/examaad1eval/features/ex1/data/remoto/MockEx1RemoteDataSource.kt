@@ -1,4 +1,8 @@
-package edu.iesam.examaad1eval.features.ex1
+package edu.iesam.examaad1eval.features.ex1.data.remoto
+
+import edu.iesam.examaad1eval.features.ex1.domain.Item
+import edu.iesam.examaad1eval.features.ex1.domain.Services
+import edu.iesam.examaad1eval.features.ex1.domain.User
 
 class MockEx1RemoteDataSource {
 
@@ -28,6 +32,5 @@ class MockEx1RemoteDataSource {
             Services("4", "Chaqueta")
         )
     }
-
 
 }
