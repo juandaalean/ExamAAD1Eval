@@ -26,7 +26,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun executeExercise1() {
-        //Ejecutar el ejercicio 1 desde aquí llamando al Ex1DataRepository directamente
         val dataRepository = Ex1DataRepository(DbExam(this), MockEx1RemoteDataSource())
         Log.d("@JuanDev", dataRepository.getUsers().toString())
         Log.d("@JuanDev", dataRepository.getItems().toString())
@@ -35,9 +34,7 @@ class MainActivity : AppCompatActivity() {
 
     @OptIn(DelicateCoroutinesApi::class)
     private fun executeExercise2() {
-        //Ejecutar el ejercicio 2 desde aquí llamando al Ex2DataRepository directamente
         GlobalScope.launch {
-            //llamar a Room
             val dbRoom = Room.databaseBuilder(
                 applicationContext,
                 Ex2DataBase::class.java,
@@ -52,6 +49,7 @@ class MainActivity : AppCompatActivity() {
             val games = dataRepository.getGames()
             if(games != null){
                 Log.d("@JuanDev", "The games has already saved")
+                Log.d("@JuanDev", "$games")
             } else{
                 Log.d("@JuanDev", "No games found :(")
             }
