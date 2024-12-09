@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">ExamAAD1Eval</string>
+    <string name="databaseName">db-exam</string>
 </resources>
